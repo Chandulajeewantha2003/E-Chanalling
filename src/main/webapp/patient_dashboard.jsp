@@ -56,108 +56,127 @@
     </section>
     <!-- ***** Hero Area End ***** -->
 
-    <!-- ***** Book An Appointment Area Start ***** -->
-<div class="medilife-book-an-appoinment-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="appointment-form-content">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col-12 col-lg-9">
-                            <div class="medilife-appointment-form">
-                                <form action="BookAppointmentServlet" method="post">
-                                    <div class="row align-items-end">
-                                        <!-- Speciality Selection -->
-                                        <div class="col-12 col-md-4">
-                                            <div class="form-group">
-                                                <label for="speciality" style="color: white;">Speciality:</label>
-                                                <select class="form-control" id="speciality" name="speciality" required>
-                                                    <option value="">Select Speciality</option>
-                                                    <option value="Cardiologist">Cardiologist</option>
-                                                    <option value="Dermatologist">Dermatologist</option>
-                                                    <option value="Neurologist">Neurologist</option>
-                                                </select>
+   <!-- ***** Book An Appoinment Area Start ***** -->
+    <div class="medilife-book-an-appoinment-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="appointment-form-content">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col-12 col-lg-9">
+                                <div class="medilife-appointment-form">
+                                    <form action="BookAppointmentServlet" method="post">
+                                        <div class="row align-items-end">
+                                            <div class="col-12 col-md-4">
+                                                <div class="form-group">
+												    <label for="speciality" style="color: white;">Speciality:</label>
+												    <select class="form-control" id="speciality" name="speciality" required>
+												        <option value="">Select Speciality</option>
+												        <option value="Cardiologist">Cardiologist</option>
+												        <option value="Dermatologist">Dermatologist</option>
+												        <option value="Neurologist">Neurologist</option>
+												    </select>
+                                                </div>
                                             </div>
-                                        </div>
+                                            <div class="col-12 col-md-4">
+                                                <div class="form-group">
+                                                     <label for="doctor" style="color: white;">Doctor:</label>
+													    <select class="form-control" id="doctor" name="doctorId" required>
+													        <option value="">Select Doctor</option>
+													        <% 
+													            try (Connection conn = DBConnection.getConnection();
+													                 Statement stmt = conn.createStatement();
+													                 ResultSet rs = stmt.executeQuery("SELECT id, name FROM users WHERE role='doctor'")) {
+													                while (rs.next()) {
+													        %>
+													        <option value="<%= rs.getInt("id") %>"><%= rs.getString("name") %></option>
+													        <%
+													                }
+													            } catch (Exception e) {
+													                e.printStackTrace();
+													            }
+													        %>
+													    </select>
+                                                </div>
+                                            </div>
+                                            <!-- Date and Time -->
+                                            <div class="col-12 col-md-2">
+                                                <div class="form-group">
+                                                 <label for="doctor" style="color: white;">Date:</label>
+                                                    <input type="date"  class="form-control" name="date" id="date" placeholder="Date" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-2">
+                                                <div class="form-group">
+                                                 <label for="doctor" style="color: white;">Time:</label>
+                                                    <input type="time" class="form-control" name="time" id="time" placeholder="Time" required>
+                                                </div>
+                                            </div>
 
-                                        <!-- Doctor Selection (Filtered by Speciality) -->
-                                        <div class="col-12 col-md-4">
-                                            <div class="form-group">
-                                                <label for="doctor" style="color: white;">Doctor:</label>
-                                                <select class="form-control" id="doctor" name="doctorId" required>
-                                                    <option value="">Select Doctor</option>
-                                                    <% 
-                                                        try (Connection conn = DBConnection.getConnection();
-                                                             Statement stmt = conn.createStatement();
-                                                             ResultSet rs = stmt.executeQuery("SELECT id, name, speciality FROM users WHERE role='doctor'")) {
-                                                            while (rs.next()) {
-                                                    %>
-                                                    <option value="<%= rs.getInt("id") %>" data-speciality="<%= rs.getString("speciality") %>">
-                                                        <%= rs.getString("name") %>
-                                                    </option>
-                                                    <%
-                                                            }
-                                                        } catch (Exception e) {
-                                                            e.printStackTrace();
-                                                        }
-                                                    %>
-                                                </select>
+                                            <!-- Patient's Name -->
+                                            <div class="col-12 col-md-4">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" name="name" id="name" placeholder="Name" required>
+                                                </div>
                                             </div>
-                                        </div>
 
-                                        <!-- Date & Time Selection -->
-                                        <div class="col-12 col-md-2">
-                                            <div class="form-group">
-                                                <label for="date" style="color: white;">Date:</label>
-                                                <input type="date" class="form-control" name="appointmentDate" id="date" required>
+                                            <!-- Patient's Phone -->
+                                            <div class="col-12 col-md-4">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" name="number" id="number" placeholder="Phone" required>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-md-2">
-                                            <div class="form-group">
-                                                <label for="time" style="color: white;">Time:</label>
-                                                <input type="time" class="form-control" name="appointmentTime" id="time" required>
-                                            </div>
-                                        </div>
 
-                                        <!-- Hidden Patient ID -->
-                                        <input type="hidden" name="patientId" value="<%= patientId %>">
+                                            <!-- Patient's Email -->
+                                            <div class="col-12 col-md-4">
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control" name="email" id="email" placeholder="E-mail" required>
+                                                </div>
+                                            </div>
 
-                                        <!-- Submit Button -->
-                                        <div class="col-12 col-md-5 mb-0">
-                                            <div class="form-group mb-0">
-                                                <button type="submit" class="btn medilife-btn">Make an Appointment <span>+</span></button>
+                                            <!-- Message -->
+                                            <div class="col-12 col-md-7">
+                                                <div class="form-group mb-0">
+                                                    <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
+                                                </div>
+                                            </div>
+
+                                            <!-- Submit Button -->
+                                            <div class="col-12 col-md-5">
+                                                <div class="form-group mb-0">
+                                                    <button type="submit" class="btn medilife-btn">Make an Appointment <span>+</span></button>
+                                                </div>
                                             </div>
                                         </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-3">
+                                <div class="medilife-contact-info">
+                                    <!-- Single Contact Info -->
+                                    <div class="single-contact-info mb-30">
+                                        <img src="img/icons/alarm-clock.png" alt="">
+                                        <p>Mon - Sat 08:00 - 21:00 <br>Sunday CLOSED</p>
                                     </div>
-                                </form>
-                            </div>
-                        </div>
-
-                        <!-- Contact Info -->
-                        <div class="col-12 col-lg-3">
-                            <div class="medilife-contact-info">
-                                <div class="single-contact-info mb-30">
-                                    <img src="img/icons/alarm-clock.png" alt="">
-                                    <p>Mon - Sat 08:00 - 21:00 <br>Sunday CLOSED</p>
-                                </div>
-                                <div class="single-contact-info mb-30">
-                                    <img src="img/icons/envelope.png" alt="">
-                                    <p>0080 673 729 766 <br>contact@business.com</p>
-                                </div>
-                                <div class="single-contact-info">
-                                    <img src="img/icons/map-pin.png" alt="">
-                                    <p>Lamas Str, no 14-18 <br>41770 Miami</p>
+                                    <!-- Single Contact Info -->
+                                    <div class="single-contact-info mb-30">
+                                        <img src="img/icons/envelope.png" alt="">
+                                        <p>0080 673 729 766 <br>contact@business.com</p>
+                                    </div>
+                                    <!-- Single Contact Info -->
+                                    <div class="single-contact-info">
+                                        <img src="img/icons/map-pin.png" alt="">
+                                        <p>Lamas Str, no 14-18 <br>41770 Miami</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- ***** Book An Appointment Area End ***** -->
+    <!-- ***** Book An Appoinment Area End ***** -->
     
 
     <!-- ***** About Us Area Start ***** -->
@@ -168,7 +187,7 @@
                     <div class="medica-about-content">
                         <h2>We always put our pacients first</h2>
                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli.</p>
-                        <a href="#" class="btn medilife-btn mt-50">View the services <span>+</span></a>
+                        <a href="view_appointments.jsp" class="btn medilife-btn mt-50">View the services <span>+</span></a>
                     </div>
                 </div>
                 <div class="col-12 col-lg-8">
@@ -453,5 +472,4 @@
 
     <!-- ***** Footer Area Start ***** -->
    <%@ include file="partials/footer.jsp" %>
-   
    

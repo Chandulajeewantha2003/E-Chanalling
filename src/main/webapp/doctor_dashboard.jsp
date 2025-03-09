@@ -23,7 +23,7 @@
 </head>
 <body>
     <h2>Welcome, Doctor <%= sessionObj.getAttribute("userName") %></h2>
-    
+
     <h3>Appointments</h3>
     <table>
         <tr>
