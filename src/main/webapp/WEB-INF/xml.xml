@@ -57,6 +57,16 @@
         <url-pattern>/AppointmentServlet</url-pattern>
     </servlet-mapping>
 
+    <!-- BookAppointmentServlet Mapping -->
+    <servlet>
+        <servlet-name>BookAppointmentServlet</servlet-name>
+        <servlet-class>online.echanneling.appointments.BookAppointmentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BookAppointmentServlet</servlet-name>
+        <url-pattern>/BookAppointmentServlet</url-pattern>
+    </servlet-mapping>
+
     <!-- PaymentServlet Mapping -->
     <servlet>
         <servlet-name>PaymentServlet</servlet-name>
