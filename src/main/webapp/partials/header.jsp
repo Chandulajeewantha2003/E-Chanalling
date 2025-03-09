@@ -33,10 +33,11 @@
 </head>
 
 <body>
-    <!-- Preloader -->
+
+    <!-- Preloader  animation
     <div id="preloader">
         <div class="medilife-load"></div>
-    </div>
+    </div>-->
 
     <!-- ***** Header Area Start ***** -->
     <header class="header-area">

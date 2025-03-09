@@ -55,8 +55,8 @@
         </div>
     </section>
     <!-- ***** Hero Area End ***** -->
-
-   <!-- ***** Book An Appointment Area Start ***** -->
+		
+		<!-- ***** Book An Appointment Area Start ***** -->
 <div class="medilife-book-an-appoinment-area">
     <div class="container">
         <div class="row">
@@ -173,7 +173,7 @@
         </div>
     </div>
 <!-- ***** Book An Appointment Area End ***** -->
-    
+   		
 
     <!-- ***** About Us Area Start ***** -->
     <section class="medica-about-us-area section-padding-100-20">
@@ -468,25 +468,5 @@
 
     <!-- ***** Footer Area Start ***** -->
    <%@ include file="partials/footer.jsp" %>
-   <!-- AJAX Script to Load Doctors Based on Speciality -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-    $(document).ready(function(){
-        $("#speciality").change(function(){
-            var speciality = $(this).val();
-            if(speciality !== ""){
-                $.ajax({
-                    url: "GetDoctorsServlet",
-                    type: "GET",
-                    data: { speciality: speciality },
-                    success: function(data){
-                        $("#doctorId").html(data);
-                    }
-                });
-            } else {
-                $("#doctorId").html('<option value="">Select Doctor</option>');
-            }
-        });
-    });
-</script>
+   
    
