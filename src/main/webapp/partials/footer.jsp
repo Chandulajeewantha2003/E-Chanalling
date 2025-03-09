@@ -121,5 +121,26 @@
 <!-- Active js -->
 <script src="js/active.js"></script>
 
+
+<script>
+    document.getElementById("speciality").addEventListener("change", function() {
+        let speciality = this.value;
+        let doctorDropdown = document.getElementById("doctor");
+        let options = doctorDropdown.options;
+        
+        for (let i = 0; i < options.length; i++) {
+            let doctorSpeciality = options[i].getAttribute("data-speciality");
+            if (doctorSpeciality === speciality || options[i].value === "") {
+                options[i].style.display = "block";
+            } else {
+                options[i].style.display = "none";
+            }
+        }
+        
+        doctorDropdown.value = "";
+    });
+</script>
+   
+
 </body>
 </html>
