@@ -56,7 +56,7 @@
     </section>
     <!-- ***** Hero Area End ***** -->
 		
-		<!-- ***** Book An Appointment Area Start ***** -->
+				<!-- ***** Book An Appointment Area Start ***** -->
 <div class="medilife-book-an-appoinment-area">
     <div class="container">
         <div class="row">
@@ -76,23 +76,34 @@
                                                     <option value="Cardiologist">Cardiologist</option>
                                                     <option value="Dermatologist">Dermatologist</option>
                                                     <option value="Neurologist">Neurologist</option>
-                                                       <option value="General Physician">General Physician</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        
-                                        <!-- Doctor Selection (Populated via AJAX) -->
-                                        <div class="col-12 col-md-4">
-                                            <div class="form-group">
-                                                <label for="doctorId" style="color: white;">Doctor:</label>
-                                                <select class="form-control" id="doctorId" name="doctorId" required>
-                                                    <option value="">Select Doctor</option>
-                                                    <!-- Doctors will be loaded here using AJAX -->
+                                                    <option value="General Physician">General Physician</option>
                                                 </select>
                                             </div>
                                         </div>
 
-                                        <!-- Date and Time -->
+                                        <div class="col-12 col-md-4">
+                                                <div class="form-group">
+                                                     <label for="doctor" style="color: white;">Doctor:</label>
+													    <select class="form-control" id="doctor" name="doctorId" required>
+													        <option value="">Select Doctor</option>
+													        <% 
+													            try (Connection conn = DBConnection.getConnection();
+													                 Statement stmt = conn.createStatement();
+													                 ResultSet rs = stmt.executeQuery("SELECT id, name FROM users WHERE role='doctor'")) {
+													                while (rs.next()) {
+													        %>
+													        <option value="<%= rs.getInt("id") %>"><%= rs.getString("name") %></option>
+													        <%
+													                }
+													            } catch (Exception e) {
+													                e.printStackTrace();
+													            }
+													        %>
+													    </select>
+                                                </div>
+                                            </div>
+
+                                             <!-- Date and Time -->
                                         <div class="col-12 col-md-2">
                                             <div class="form-group">
                                                 <label for="date" style="color: white;">Date:</label>
@@ -106,30 +117,31 @@
                                             </div>
                                         </div>
 
+
                                         <!-- Auto-Filled Patient Details -->
                                         <%
-                                            // Fetch session user details (Assuming user details are stored in session)
+                                            // Fetch session user details
                                             Integer userId = (Integer) session.getAttribute("userId");
                                             String userName = (String) session.getAttribute("userName");
                                             String userEmail = (String) session.getAttribute("userEmail");
-                                            String userPhone = (String) session.getAttribute("userPhone");
                                         %>
 
                                         <div class="col-12 col-md-4">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" name="name" id="name" placeholder="Name" value="<%= userName != null ? userName : "" %>" required>
+                                                <input type="text" class="form-control" name="name" id="name" placeholder="Name" value="<%= userName != null ? userName : "" %>" readonly>
                                             </div>
                                         </div>
-
+											
+										 <!-- Patient's Phone -->
+                                            <div class="col-12 col-md-4">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" name="number" id="number" placeholder="Phone" required>
+                                                </div>
+                                            </div>	
+											
                                         <div class="col-12 col-md-4">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" name="number" id="number" placeholder="Phone" value="<%= userPhone != null ? userPhone : "" %>" required>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-12 col-md-4">
-                                            <div class="form-group">
-                                                <input type="email" class="form-control" name="email" id="email" placeholder="E-mail" value="<%= userEmail != null ? userEmail : "" %>" required>
+                                                <input type="email" class="form-control" name="email" id="email" placeholder="E-mail" value="<%= userEmail != null ? userEmail : "" %>">
                                             </div>
                                         </div>
 
@@ -174,6 +186,8 @@
         </div>
     </div>
 <!-- ***** Book An Appointment Area End ***** -->
+
+	
    		
 
     <!-- ***** About Us Area Start ***** -->
@@ -469,5 +483,23 @@
 
     <!-- ***** Footer Area Start ***** -->
    <%@ include file="partials/footer.jsp" %>
-   
+   <!-- AJAX Script -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // When specialization is changed, fetch doctors
+        $("#speciality").change(function() {
+            var speciality = $(this).val();
+            $.ajax({
+                type: "GET",
+                url: "GetDoctorsServlet",
+                data: { speciality: speciality },
+                success: function(response) {
+                    $("#doctorId").html(response);
+                }
+            });
+        });
+    });
+</script>
+			
    

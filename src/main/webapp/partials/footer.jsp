@@ -121,27 +121,7 @@
 <!-- Active js -->
 <script src="js/active.js"></script>
 
-<!-- AJAX Script to Load Doctors Based on Speciality -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-    $(document).ready(function(){
-        $("#speciality").change(function(){
-            var speciality = $(this).val();
-            if(speciality !== ""){
-                $.ajax({
-                    url: "GetDoctorsServlet",
-                    type: "GET",
-                    data: { speciality: speciality },
-                    success: function(data){
-                        $("#doctorId").html(data);
-                    }
-                });
-            } else {
-                $("#doctorId").html('<option value="">Select Doctor</option>');
-            }
-        });
-    });
-</script>
+
    
 
 </body>
