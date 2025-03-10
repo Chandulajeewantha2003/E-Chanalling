@@ -76,6 +76,7 @@
                                                     <option value="Cardiologist">Cardiologist</option>
                                                     <option value="Dermatologist">Dermatologist</option>
                                                     <option value="Neurologist">Neurologist</option>
+                                                       <option value="General Physician">General Physician</option>
                                                 </select>
                                             </div>
                                         </div>
