@@ -56,4 +56,31 @@ public class DoctorDAO {
         }
         return null;
     }
+
+    // **NEW: Method to update doctor's specialization**
+    public boolean updateDoctorSpecialization(int doctorId, String newSpecialization) {
+        String sql = "UPDATE users SET specialization = ? WHERE id = ? AND role = 'doctor'";
+        try (Connection conn = DBConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, newSpecialization);
+            stmt.setInt(2, doctorId);
+            return stmt.executeUpdate() > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    // **NEW: Method to delete a doctor**
+    public boolean deleteDoctor(int doctorId) {
+        String sql = "DELETE FROM users WHERE id = ? AND role = 'doctor'";
+        try (Connection conn = DBConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, doctorId);
+            return stmt.executeUpdate() > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
 }
