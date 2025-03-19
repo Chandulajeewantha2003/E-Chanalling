@@ -28,50 +28,57 @@
             </thead>
             <tbody>
                 <%
-                    HttpSession sessionObj = request.getSession();
-                    Integer patientId = (Integer) sessionObj.getAttribute("userId");
-
-                    if (patientId != null) {
-                        try (Connection conn = DBConnection.getConnection()) {
+                    HttpSession sessionObj = request.getSession(false);
+                    if (sessionObj != null && sessionObj.getAttribute("userId") != null) {
+                        Integer patientId = (Integer) sessionObj.getAttribute("userId");
+                        Connection conn = null;
+                        PreparedStatement stmt = null;
+                        ResultSet rs = null;
+                        try {
+                            conn = DBConnection.getConnection();
                             String sql = "SELECT a.id, d.name AS doctor_name, a.specialization, a.appointment_date, a.problem, a.status, " +
                                          "(SELECT COUNT(*) FROM appointments WHERE patient_id = ?) AS totalAppointments, " +
                                          "(SELECT COUNT(*) FROM appointments WHERE patient_id = ? AND id <= a.id) AS currentIndex " +
                                          "FROM appointments a " +
                                          "JOIN users d ON a.doctor_id = d.id " +
                                          "WHERE a.patient_id = ? ORDER BY a.appointment_date DESC";
-
-                            PreparedStatement stmt = conn.prepareStatement(sql);
+                            stmt = conn.prepareStatement(sql);
                             stmt.setInt(1, patientId);
                             stmt.setInt(2, patientId);
                             stmt.setInt(3, patientId);
-                            ResultSet rs = stmt.executeQuery();
-
+                            rs = stmt.executeQuery();
+                            
+                            boolean hasAppointments = false;
                             while (rs.next()) {
-                                int appointmentId = rs.getInt("id");
-                                String doctorName = rs.getString("doctor_name");
-                                String specialization = rs.getString("specialization");
-                                String appointmentDate = rs.getString("appointment_date");
-                                String problem = rs.getString("problem");
-                                String status = rs.getString("status");
-                                int totalAppointments = rs.getInt("totalAppointments");
-                                int currentIndex = rs.getInt("currentIndex");
+                                hasAppointments = true;
                 %>
                 <tr>
-                    <td><%= currentIndex %>/<%= totalAppointments %></td>
-                    <td><%= doctorName %></td>
-                    <td><%= specialization %></td>
-                    <td><%= appointmentDate %></td>
-                    <td><%= problem %></td>
+                    <td><%= rs.getInt("currentIndex") %>/<%= rs.getInt("totalAppointments") %></td>
+                    <td><%= rs.getString("doctor_name") %></td>
+                    <td><%= rs.getString("specialization") %></td>
+                    <td><%= rs.getString("appointment_date") %></td>
+                    <td><%= rs.getString("problem") %></td>
                     <td>
-                        <span class="badge <%= status.equals("Pending") ? "bg-warning" : (status.equals("Confirmed") ? "bg-success" : "bg-danger") %>">
-                            <%= status %>
+                        <span class="badge <%= rs.getString("status").equals("Pending") ? "bg-warning" : (rs.getString("status").equals("Confirmed") ? "bg-success" : "bg-danger") %>">
+                            <%= rs.getString("status") %>
                         </span>
                     </td>
                 </tr>
                 <%
                             }
+                            if (!hasAppointments) {
+                %>
+                <tr>
+                    <td colspan="6" class="text-center">No appointments found.</td>
+                </tr>
+                <%
+                            }
                         } catch (SQLException e) {
                             e.printStackTrace();
+                        } finally {
+                            if (rs != null) try { rs.close(); } catch (SQLException ignored) {}
+                            if (stmt != null) try { stmt.close(); } catch (SQLException ignored) {}
+                            if (conn != null) try { conn.close(); } catch (SQLException ignored) {}
                         }
                     } else {
                 %>
