@@ -5,9 +5,14 @@
          http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          version="3.0">
 
+    <!-- Application Display Name -->
     <display-name>Online E-Channeling System</display-name>
 
-    <!-- RegisterServlet Mapping -->
+    <!-- ========================= -->
+    <!--        USER MODULE        -->
+    <!-- ========================= -->
+
+    <!-- RegisterServlet: Handles user registration -->
     <servlet>
         <servlet-name>RegisterServlet</servlet-name>
         <servlet-class>online.echanneling.users.RegisterServlet</servlet-class>
@@ -17,7 +22,7 @@
         <url-pattern>/RegisterServlet</url-pattern>
     </servlet-mapping>
 
-    <!-- LoginServlet Mapping -->
+    <!-- LoginServlet: Handles user login authentication -->
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>online.echanneling.users.LoginServlet</servlet-class>
@@ -27,7 +32,7 @@
         <url-pattern>/LoginServlet</url-pattern>
     </servlet-mapping>
 
-    <!-- UpdateProfileServlet Mapping -->
+    <!-- UpdateProfileServlet: Allows users to update their profiles -->
     <servlet>
         <servlet-name>UpdateProfileServlet</servlet-name>
         <servlet-class>online.echanneling.users.UpdateProfileServlet</servlet-class>
@@ -37,7 +42,7 @@
         <url-pattern>/UpdateProfileServlet</url-pattern>
     </servlet-mapping>
 
-    <!-- DeleteProfileServlet Mapping -->
+    <!-- DeleteProfileServlet: Allows users to delete their profiles -->
     <servlet>
         <servlet-name>DeleteProfileServlet</servlet-name>
         <servlet-class>online.echanneling.users.DeleteProfileServlet</servlet-class>
@@ -47,7 +52,11 @@
         <url-pattern>/DeleteProfileServlet</url-pattern>
     </servlet-mapping>
 
-    <!-- AppointmentServlet Mapping -->
+    <!-- ========================= -->
+    <!--     APPOINTMENT MODULE    -->
+    <!-- ========================= -->
+
+    <!-- AppointmentServlet: Handles general appointment-related actions -->
     <servlet>
         <servlet-name>AppointmentServlet</servlet-name>
         <servlet-class>online.echanneling.appointments.AppointmentServlet</servlet-class>
@@ -57,7 +66,7 @@
         <url-pattern>/AppointmentServlet</url-pattern>
     </servlet-mapping>
 
-    <!-- BookAppointmentServlet Mapping -->
+    <!-- BookAppointmentServlet: Handles appointment booking -->
     <servlet>
         <servlet-name>BookAppointmentServlet</servlet-name>
         <servlet-class>online.echanneling.appointments.BookAppointmentServlet</servlet-class>
@@ -67,7 +76,22 @@
         <url-pattern>/BookAppointmentServlet</url-pattern>
     </servlet-mapping>
 
-    <!-- PaymentServlet Mapping -->
+    <!-- ✅ Added this missing servlet -->
+    <!-- UpdateAppointmentStatusServlet: Allows admin to approve/reject appointments -->
+    <servlet>
+        <servlet-name>UpdateAppointmentStatusServlet</servlet-name>
+        <servlet-class>online.echanneling.appointments.UpdateAppointmentStatusServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateAppointmentStatusServlet</servlet-name>
+        <url-pattern>/UpdateAppointmentStatusServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- ========================= -->
+    <!--       PAYMENT MODULE      -->
+    <!-- ========================= -->
+
+    <!-- PaymentServlet: Handles patient payments -->
     <servlet>
         <servlet-name>PaymentServlet</servlet-name>
         <servlet-class>online.echanneling.payments.PaymentServlet</servlet-class>
@@ -77,7 +101,11 @@
         <url-pattern>/PaymentServlet</url-pattern>
     </servlet-mapping>
 
-    <!-- MessageServlet Mapping -->
+    <!-- ========================= -->
+    <!--       MESSAGE MODULE      -->
+    <!-- ========================= -->
+
+    <!-- MessageServlet: Handles patient-doctor messaging -->
     <servlet>
         <servlet-name>MessageServlet</servlet-name>
         <servlet-class>online.echanneling.messages.MessageServlet</servlet-class>
@@ -87,12 +115,20 @@
         <url-pattern>/MessageServlet</url-pattern>
     </servlet-mapping>
 
-    <!-- Session Configuration -->
+    <!-- ========================= -->
+    <!--     SESSION MANAGEMENT    -->
+    <!-- ========================= -->
+
+    <!-- Set session timeout to 30 minutes -->
     <session-config>
         <session-timeout>30</session-timeout>
     </session-config>
 
-    <!-- Welcome Page -->
+    <!-- ========================= -->
+    <!--       WELCOME PAGE        -->
+    <!-- ========================= -->
+
+    <!-- Set default page when application loads -->
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
