@@ -3,7 +3,6 @@ package online.echanneling.appointments;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -24,16 +23,19 @@ public class UpdateAppointmentStatusServlet extends HttpServlet {
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setString(1, status);
             stmt.setInt(2, appointmentId);
-
             int rowsUpdated = stmt.executeUpdate();
+
             if (rowsUpdated > 0) {
                 response.setStatus(HttpServletResponse.SC_OK);
+                response.getWriter().write("Success");
             } else {
-                response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+                response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+                response.getWriter().write("Failed to update status.");
             }
-        } catch (SQLException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
             response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            response.getWriter().write("Error: " + e.getMessage());
+            e.printStackTrace();
         }
     }
 }

@@ -41,7 +41,6 @@
         <servlet-name>UpdateProfileServlet</servlet-name>
         <url-pattern>/UpdateProfileServlet</url-pattern>
     </servlet-mapping>
-
     <!-- DeleteProfileServlet: Allows users to delete their profiles -->
     <servlet>
         <servlet-name>DeleteProfileServlet</servlet-name>
@@ -78,15 +77,15 @@
 
     <!-- ✅ Added this missing servlet -->
     <!-- UpdateAppointmentStatusServlet: Allows admin to approve/reject appointments -->
-    <servlet>
-        <servlet-name>UpdateAppointmentStatusServlet</servlet-name>
-        <servlet-class>online.echanneling.appointments.UpdateAppointmentStatusServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>UpdateAppointmentStatusServlet</servlet-name>
-        <url-pattern>/UpdateAppointmentStatusServlet</url-pattern>
-    </servlet-mapping>
-
+   <!-- UpdateAppointmentStatusServlet Mapping -->
+	<servlet>
+	    <servlet-name>UpdateAppointmentStatusServlet</servlet-name>
+	    <servlet-class>online.echanneling.appointments.UpdateAppointmentStatusServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>UpdateAppointmentStatusServlet</servlet-name>
+	    <url-pattern>/UpdateAppointmentStatusServlet</url-pattern>
+	</servlet-mapping>
     <!-- ========================= -->
     <!--       PAYMENT MODULE      -->
     <!-- ========================= -->
