@@ -46,7 +46,7 @@ public class AppointmentServlet extends HttpServlet {
                     int appointmentId = rs.getInt(1);
                     session.setAttribute("appointmentId", appointmentId);
                 }
-                response.sendRedirect("ViewAppointments.jsp?success=true");
+                response.sendRedirect("viewappointments.jsp?success=true");
             } else {
                 response.sendRedirect("BookAppointment.jsp?error=DatabaseError");
             }

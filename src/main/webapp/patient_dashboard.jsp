@@ -63,7 +63,7 @@
                     <div class="medica-about-content">
                         <h2>We always put our pacients first</h2>
                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli.</p>
-                        <a href="viewAppointments.jsp" class="btn medilife-btn mt-50">View the services <span>+</span></a>
+                        <a href="viewappointments.jsp" class="btn medilife-btn mt-50">View the services <span>+</span></a>
                     </div>
                 </div>
                 <div class="col-12 col-lg-8">

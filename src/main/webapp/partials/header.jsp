@@ -80,7 +80,7 @@
                                             <a class="nav-link" href="services.jsp">Services</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="blog.jsp">News</a>
+                                            <a class="nav-link" href="bookAppointment.jsp">Appointment</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="contact.jsp">Contact</a>

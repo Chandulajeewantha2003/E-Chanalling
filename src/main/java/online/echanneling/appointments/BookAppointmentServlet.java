@@ -40,7 +40,7 @@ public class BookAppointmentServlet extends HttpServlet {
             int result = ps.executeUpdate();
             if (result > 0) {
                 session.setAttribute("successMessage", "Appointment booked successfully!");
-                response.sendRedirect("ViewAppointments.jsp");
+                response.sendRedirect("viewappointments.jsp");
             } else {
                 session.setAttribute("errorMessage", "Failed to book appointment.");
                 response.sendRedirect("BookAppointment.jsp");
