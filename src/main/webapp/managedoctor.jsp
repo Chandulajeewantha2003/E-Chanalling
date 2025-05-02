@@ -1,7 +1,10 @@
-<%@ page import="java.sql.*, online.echanneling.DBConnection, online.echanneling.doctors.Doctor, online.echanneling.doctors.DoctorDAO" %>
-<%@ page import="java.util.List, online.echanneling.doctors.Doctor, online.echanneling.doctors.DoctorDAO" %>
+<%@ page import="java.sql.*, java.util.List" %>
+<%@ page import="com.echanalling.util.DBConnection" %>
+<%@ page import="com.echanalling.model.Doctor" %>
+<%@ page import="com.echanalling.service.DoctorDAO" %>
 <%@ page import="javax.servlet.http.HttpSession" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 
 <%
     HttpSession sessionObj = request.getSession(false);

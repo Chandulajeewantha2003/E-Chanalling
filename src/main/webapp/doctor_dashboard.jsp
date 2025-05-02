@@ -1,4 +1,4 @@
-<%@ page import="java.sql.*, online.echanneling.DBConnection" %>
+<%@ page import="java.sql.*, com.echanalling.util.DBConnection" %>
 <%@ page import="javax.servlet.http.HttpSession" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
