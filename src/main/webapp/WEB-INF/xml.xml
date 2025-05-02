@@ -15,7 +15,7 @@
     <!-- RegisterServlet: Handles user registration -->
     <servlet>
         <servlet-name>RegisterServlet</servlet-name>
-        <servlet-class>online.echanneling.users.RegisterServlet</servlet-class>
+        <servlet-class>com.echanalling.servlet.RegisterServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
@@ -25,7 +25,7 @@
     <!-- LoginServlet: Handles user login authentication -->
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
-        <servlet-class>online.echanneling.users.LoginServlet</servlet-class>
+        <servlet-class>com.echanalling.servlet.LoginServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
@@ -35,16 +35,17 @@
     <!-- UpdateProfileServlet: Allows users to update their profiles -->
     <servlet>
         <servlet-name>UpdateProfileServlet</servlet-name>
-        <servlet-class>online.echanneling.users.UpdateProfileServlet</servlet-class>
+        <servlet-class>com.echanalling.servlet.UpdateProfileServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>UpdateProfileServlet</servlet-name>
         <url-pattern>/UpdateProfileServlet</url-pattern>
     </servlet-mapping>
+
     <!-- DeleteProfileServlet: Allows users to delete their profiles -->
     <servlet>
         <servlet-name>DeleteProfileServlet</servlet-name>
-        <servlet-class>online.echanneling.users.DeleteProfileServlet</servlet-class>
+        <servlet-class>com.echanalling.servlet.DeleteProfileServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>DeleteProfileServlet</servlet-name>
@@ -58,7 +59,7 @@
     <!-- AppointmentServlet: Handles general appointment-related actions -->
     <servlet>
         <servlet-name>AppointmentServlet</servlet-name>
-        <servlet-class>online.echanneling.appointments.AppointmentServlet</servlet-class>
+        <servlet-class>com.echanalling.servlet.AppointmentServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>AppointmentServlet</servlet-name>
@@ -68,24 +69,23 @@
     <!-- BookAppointmentServlet: Handles appointment booking -->
     <servlet>
         <servlet-name>BookAppointmentServlet</servlet-name>
-        <servlet-class>online.echanneling.appointments.BookAppointmentServlet</servlet-class>
+        <servlet-class>com.echanalling.servlet.BookAppointmentServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>BookAppointmentServlet</servlet-name>
         <url-pattern>/BookAppointmentServlet</url-pattern>
     </servlet-mapping>
 
-    <!-- ✅ Added this missing servlet -->
     <!-- UpdateAppointmentStatusServlet: Allows admin to approve/reject appointments -->
-   <!-- UpdateAppointmentStatusServlet Mapping -->
-	<servlet>
-	    <servlet-name>UpdateAppointmentStatusServlet</servlet-name>
-	    <servlet-class>online.echanneling.appointments.UpdateAppointmentStatusServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-	    <servlet-name>UpdateAppointmentStatusServlet</servlet-name>
-	    <url-pattern>/UpdateAppointmentStatusServlet</url-pattern>
-	</servlet-mapping>
+    <servlet>
+        <servlet-name>UpdateAppointmentStatusServlet</servlet-name>
+        <servlet-class>com.echanalling.servlet.UpdateAppointmentStatusServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateAppointmentStatusServlet</servlet-name>
+        <url-pattern>/UpdateAppointmentStatusServlet</url-pattern>
+    </servlet-mapping>
+
     <!-- ========================= -->
     <!--       PAYMENT MODULE      -->
     <!-- ========================= -->
@@ -93,7 +93,7 @@
     <!-- PaymentServlet: Handles patient payments -->
     <servlet>
         <servlet-name>PaymentServlet</servlet-name>
-        <servlet-class>online.echanneling.payments.PaymentServlet</servlet-class>
+        <servlet-class>com.echanalling.servlet.PaymentServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>PaymentServlet</servlet-name>
@@ -107,7 +107,7 @@
     <!-- MessageServlet: Handles patient-doctor messaging -->
     <servlet>
         <servlet-name>MessageServlet</servlet-name>
-        <servlet-class>online.echanneling.messages.MessageServlet</servlet-class>
+        <servlet-class>com.echanalling.servlet.MessageServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>MessageServlet</servlet-name>
