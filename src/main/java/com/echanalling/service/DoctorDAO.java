@@ -6,7 +6,7 @@ import java.util.List;
 
 import com.echanalling.model.Doctor;
 
-import com.echanalling.util.DBConnection;
+import online.echanneling.DBConnection;
 
 public class DoctorDAO {
 

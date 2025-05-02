@@ -7,7 +7,7 @@ import java.sql.SQLException;
 
 import com.echanalling.model.User;
 
-import com.echanalling.util.DBConnection;
+import online.echanneling.DBConnection;
 
 public class UserDAO {
     private Connection conn;

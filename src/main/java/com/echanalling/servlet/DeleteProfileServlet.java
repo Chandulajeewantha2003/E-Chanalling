@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import com.echanalling.util.DBConnection;
+import online.echanneling.DBConnection;
 
 @WebServlet("/DeleteProfileServlet")
 public class DeleteProfileServlet extends HttpServlet {
