@@ -34,7 +34,7 @@
 
 <body>
 
-     Preloader  animation
+     
     <div id="preloader">
         <div class="medilife-load"></div>
     </div>
