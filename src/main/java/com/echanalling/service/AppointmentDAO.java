@@ -8,7 +8,7 @@ import java.util.List;
 
 import com.echanalling.model.Appointment;
 
-import online.echanneling.DBConnection;
+import com.echanalling.util.DBConnection;
 
 public class AppointmentDAO {
      

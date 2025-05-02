@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import online.echanneling.DBConnection;
+import com.echanalling.util.DBConnection;
 
 @WebServlet("/UpdateProfileServlet")
 public class UpdateProfileServlet extends HttpServlet {

@@ -1,4 +1,4 @@
-package online.echanneling;
+package com.echanalling.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

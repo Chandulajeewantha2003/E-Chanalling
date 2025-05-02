@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import com.google.gson.Gson;
-import online.echanneling.DBConnection;
+import com.echanalling.util.DBConnection;
 
 @WebServlet("/GetDoctorsServlet")
 public class GetDoctorsServlet extends HttpServlet {

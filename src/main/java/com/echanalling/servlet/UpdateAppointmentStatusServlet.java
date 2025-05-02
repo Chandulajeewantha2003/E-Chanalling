@@ -8,7 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import online.echanneling.DBConnection;
+import com.echanalling.util.DBConnection;
 
 @WebServlet("/UpdateAppointmentStatusServlet")
 public class UpdateAppointmentStatusServlet extends HttpServlet {
