@@ -1,5 +1,5 @@
 <%@ page import="java.sql.*" %>
-<%@ page import="com.echanalling.util.DBConnection" %>
+<%@ page import="online.echanneling.DBConnection" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>

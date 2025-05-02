@@ -1,5 +1,5 @@
 <%@ page import="java.sql.*, java.util.List" %>
-<%@ page import="com.echanalling.util.DBConnection" %>
+<%@ page import="online.echanneling.DBConnection" %>
 <%@ page import="com.echanalling.model.Doctor" %>
 <%@ page import="com.echanalling.service.DoctorDAO" %>
 <%@ page import="javax.servlet.http.HttpSession" %>
