@@ -32,7 +32,7 @@
 <body>
 
 <h2>Welcome, Doctor <%= sessionObj.getAttribute("userName") %></h2>
-
+ <a href="messages.jsp" class="btn medilife-btn mt-50">Contact <span>+</span></a>
 <div>
     <h2>My Appointments</h2>
     <table>
