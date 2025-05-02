@@ -87,34 +87,6 @@
     </servlet-mapping>
 
     <!-- ========================= -->
-    <!--       PAYMENT MODULE      -->
-    <!-- ========================= -->
-
-    <!-- PaymentServlet: Handles patient payments -->
-    <servlet>
-        <servlet-name>PaymentServlet</servlet-name>
-        <servlet-class>com.echanalling.servlet.PaymentServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>PaymentServlet</servlet-name>
-        <url-pattern>/PaymentServlet</url-pattern>
-    </servlet-mapping>
-
-    <!-- ========================= -->
-    <!--       MESSAGE MODULE      -->
-    <!-- ========================= -->
-
-    <!-- MessageServlet: Handles patient-doctor messaging -->
-    <servlet>
-        <servlet-name>MessageServlet</servlet-name>
-        <servlet-class>com.echanalling.servlet.MessageServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>MessageServlet</servlet-name>
-        <url-pattern>/MessageServlet</url-pattern>
-    </servlet-mapping>
-
-    <!-- ========================= -->
     <!--     SESSION MANAGEMENT    -->
     <!-- ========================= -->
 
