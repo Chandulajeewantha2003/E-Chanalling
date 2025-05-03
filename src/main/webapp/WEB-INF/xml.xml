@@ -85,6 +85,40 @@
         <servlet-name>UpdateAppointmentStatusServlet</servlet-name>
         <url-pattern>/UpdateAppointmentStatusServlet</url-pattern>
     </servlet-mapping>
+    
+    
+    <!-- ========================= -->
+    <!--     Message MANAGEMENT    -->
+    <!-- ========================= -->
+    
+    <servlet>
+	    <servlet-name>SendMessageServlet</servlet-name>
+	    <servlet-class>com.echanalling.servlet.SendMessageServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	    <servlet-name>SendMessageServlet</servlet-name>
+	    <url-pattern>/sendMessage</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	    <servlet-name>UpdateMessageServlet</servlet-name>
+	    <servlet-class>com.echanalling.servlet.UpdateMessageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>UpdateMessageServlet</servlet-name>
+	    <url-pattern>/updateMessage</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	    <servlet-name>DeleteMessageServlet</servlet-name>
+	    <servlet-class>com.echanalling.servlet.DeleteMessageServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	    <servlet-name>DeleteMessageServlet</servlet-name>
+	    <url-pattern>/deleteMessage</url-pattern>
+	</servlet-mapping>
 
     <!-- ========================= -->
     <!--     SESSION MANAGEMENT    -->
