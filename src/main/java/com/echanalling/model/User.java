@@ -6,7 +6,13 @@ public class User {
     private String email;
     private String password;
     private String role;
+    private String specialization;
 
+    
+    // ✅ No-arg constructor
+    public User() {
+    }
+       
     // Constructor
     public User(int id, String name, String email, String password, String role) {
         this.id = id;
@@ -31,4 +37,8 @@ public class User {
 
     public String getRole() { return role; }
     public void setRole(String role) { this.role = role; }
+    
+    public String getSpecialization() { return specialization; } // ➕
+    public void setSpecialization(String specialization) { this.specialization = specialization; }
+    
 }

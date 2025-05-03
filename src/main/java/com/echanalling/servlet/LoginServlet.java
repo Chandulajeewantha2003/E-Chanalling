@@ -34,6 +34,7 @@ public class LoginServlet extends HttpServlet {
             session.setAttribute("userId", user.getId());
             session.setAttribute("userName", user.getName());
             session.setAttribute("userRole", user.getRole());
+            session.setAttribute("userEmail", user.getEmail());
 
             if ("doctor".equals(user.getRole())) {
                 com.echanalling.model.Doctor doctor = doctorDAO.getDoctorById(user.getId());

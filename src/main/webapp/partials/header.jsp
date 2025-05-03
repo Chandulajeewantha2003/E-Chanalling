@@ -77,7 +77,7 @@
                                             <a class="nav-link" href="about-us.jsp">About Us</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="services.jsp">Services</a>
+                                            <a class="nav-link" href="${pageContext.request.contextPath}/messages">Messages</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="bookAppointment.jsp">Appointment</a>

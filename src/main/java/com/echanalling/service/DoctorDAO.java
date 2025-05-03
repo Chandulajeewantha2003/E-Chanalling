@@ -3,6 +3,11 @@ package com.echanalling.service;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
+
+import com.echanalling.model.User;
+
 
 import com.echanalling.model.Doctor;
 
@@ -86,4 +91,50 @@ public class DoctorDAO {
             return false;
         }
     }
+    
+    public List<String> getAllSpecializations() {
+        List<String> specializations = new ArrayList<>();
+        String sql = "SELECT DISTINCT specialization FROM users WHERE role = 'doctor' AND specialization IS NOT NULL AND specialization <> ''";
+
+        try (Connection conn = DBConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql);
+             ResultSet rs = stmt.executeQuery()) {
+
+            while (rs.next()) {
+                specializations.add(rs.getString("specialization"));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return specializations;
+    }
+
+    
+    public Map<String, List<User>> getDoctorsGroupedBySpecialization() {
+        Map<String, List<User>> map = new HashMap<>();
+        String sql = "SELECT * FROM users WHERE role = 'doctor' AND specialization IS NOT NULL AND specialization <> ''";
+
+        try (Connection conn = DBConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql);
+             ResultSet rs = stmt.executeQuery()) {
+
+            while (rs.next()) {
+                User doctor = new User();
+                doctor.setId(rs.getInt("id"));
+                doctor.setName(rs.getString("name"));
+                doctor.setSpecialization(rs.getString("specialization"));
+
+                map.computeIfAbsent(doctor.getSpecialization(), k -> new ArrayList<>()).add(doctor);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return map;
+    }
+
+    
+    
+    
 }

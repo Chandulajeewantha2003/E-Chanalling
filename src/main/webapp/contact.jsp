@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<%
+    String userName = (String) session.getAttribute("userName");
+    String userEmail = (String) session.getAttribute("userEmail");
+%>
+ 
+
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="">
@@ -122,11 +128,14 @@
 
                         <form action="#" method="post">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="contact-name" placeholder="Name">
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control" id="contact-email" placeholder="Email">
-                            </div>
+							    <input type="text" class="form-control" id="contact-name" placeholder="Name"
+							           value="<%= userName != null ? userName : "" %>" readonly>
+							</div>
+							<div class="form-group">
+							    <input type="email" class="form-control" id="contact-email" placeholder="Email"
+							           value="<%= userEmail != null ? userEmail : "" %>" readonly>
+							</div>
+
                             <div class="form-group">
                                 <textarea class="form-control" name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
                             </div>
@@ -134,6 +143,8 @@
                         </form>
                     </div>
                 </div>
+                
+                
 
                 <div class="col-12 col-lg-4">
                     <div class="content-sidebar">
@@ -326,7 +337,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
     <script src="js/popper.min.js"></script>
-    <!-- Bootstrap js -->
+    <!-- Bootstrap js -->-
     <script src="js/bootstrap.min.js"></script>
     <!-- Plugins js -->
     <script src="js/plugins.js"></script>
