@@ -2,6 +2,7 @@
 <%@ page import="javax.servlet.http.HttpSession" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
+
 <%
     HttpSession sessionObj = request.getSession(false);
     if (sessionObj == null || sessionObj.getAttribute("userRole") == null || !"patient".equals(sessionObj.getAttribute("userRole"))) {
@@ -29,6 +30,7 @@
         e.printStackTrace();
     }
 %>
+ <!-- ***** Header Area Start ***** -->
 
 <!DOCTYPE html>
 <html lang="en">

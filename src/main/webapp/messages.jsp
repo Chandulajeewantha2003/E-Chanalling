@@ -14,7 +14,7 @@
     <div class="container mx-auto flex justify-between items-center">
         <h1 class="text-2xl font-bold text-purple-700">Messages</h1>
         <nav>
-            <a href="index.jsp" class="text-blue-600 hover:underline">Home</a>
+            <a href="patient_dashboard.jsp" class="text-blue-600 hover:underline">Home</a>
         </nav>
     </div>
 </header>
