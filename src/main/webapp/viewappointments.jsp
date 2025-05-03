@@ -24,6 +24,7 @@
                     <th>Date & Time</th>
                     <th>Problem</th>
                     <th>Status</th>
+                    <th>Action</th> <!-- Added Action column -->
                 </tr>
             </thead>
             <tbody>
@@ -63,13 +64,19 @@
                             <%= rs.getString("status") %>
                         </span>
                     </td>
+                    <td>
+                        <form action="deleteAppointment.jsp" method="post" onsubmit="return confirm('Are you sure you want to delete this appointment?');">
+                            <input type="hidden" name="appointmentId" value="<%= rs.getInt("id") %>">
+                            <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                        </form>
+                    </td>
                 </tr>
                 <%
                             }
                             if (!hasAppointments) {
                 %>
                 <tr>
-                    <td colspan="6" class="text-center">No appointments found.</td>
+                    <td colspan="7" class="text-center">No appointments found.</td>
                 </tr>
                 <%
                             }
@@ -83,7 +90,7 @@
                     } else {
                 %>
                 <tr>
-                    <td colspan="6" class="text-center">Please <a href="login.jsp">login</a> to view your appointments.</td>
+                    <td colspan="7" class="text-center">Please <a href="login.jsp">login</a> to view your appointments.</td>
                 </tr>
                 <%
                     }
