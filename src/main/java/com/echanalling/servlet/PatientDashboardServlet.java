@@ -7,7 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
-@WebServlet("/PatientDashboardServlet") // Optional: can be used with @WebServlet instead of web.xml
+@WebServlet("/PatientDashboard") // Optional: can be used with @WebServlet instead of web.xml
 public class PatientDashboardServlet extends HttpServlet {
 	 @Override
 	    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

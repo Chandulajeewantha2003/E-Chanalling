@@ -29,7 +29,7 @@ public class LoginController extends HttpServlet {
             session.setAttribute("user", username); // Store user info in session
 
             // Redirect to the Patient Dashboard after successful login
-            response.sendRedirect("PatientDashboardServlet");
+            response.sendRedirect("PatientDashboard");
         } else {
             // If login fails, forward back to the login page with an error message
             request.setAttribute("errorMessage", "Invalid username or password");
