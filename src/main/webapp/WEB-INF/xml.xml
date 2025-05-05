@@ -31,6 +31,17 @@
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet</url-pattern>
     </servlet-mapping>
+    
+    
+    <servlet>
+	    <servlet-name>PatientDashboardServlet</servlet-name>
+	    <servlet-class>com.echanalling.servlet.PatientDashboardServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>PatientDashboardServlet</servlet-name>
+	    <url-pattern>/PatientDashboardServlet</url-pattern>
+	</servlet-mapping>
+    
 
     <!-- UpdateProfileServlet: Allows users to update their profiles -->
     <servlet>
