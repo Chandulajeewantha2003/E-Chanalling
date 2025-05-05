@@ -41,9 +41,8 @@
 	    <servlet-name>PatientDashboardServlet</servlet-name>
 	    <url-pattern>/PatientDashboardServlet</url-pattern>
 	</servlet-mapping>
-    
 
-    <!-- UpdateProfileServlet: Allows users to update their profiles -->
+	<!-- UpdateProfileServlet: Allows users to update their profiles -->
     <servlet>
         <servlet-name>UpdateProfileServlet</servlet-name>
         <servlet-class>com.echanalling.servlet.UpdateProfileServlet</servlet-class>
