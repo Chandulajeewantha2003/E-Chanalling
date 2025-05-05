@@ -32,7 +32,7 @@
         <url-pattern>/LoginServlet</url-pattern>
     </servlet-mapping>
     
-    
+    <!-- LoginServlet: Handles patient login authentication -->
     <servlet>
 	    <servlet-name>PatientDashboardServlet</servlet-name>
 	    <servlet-class>com.echanalling.servlet.PatientDashboardServlet</servlet-class>
