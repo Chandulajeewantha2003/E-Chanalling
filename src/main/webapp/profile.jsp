@@ -93,7 +93,7 @@
             <button type="submit" class="btn btn-danger w-100">Delete Age, Address, and Phone</button>
         </form>
 
-        <button type="button" class="btn btn-secondary w-100 mt-3" onclick="window.location.href='patient_dashboard.jsp'">Go Back</button>
+        <button type="button" class="btn btn-secondary w-100 mt-3" onclick="window.location.href='PatientDashboardServlet'">Go Back</button>
     </div>
 </body>
 </html>

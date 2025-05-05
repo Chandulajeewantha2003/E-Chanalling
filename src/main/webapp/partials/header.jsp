@@ -70,8 +70,8 @@
                                 <div class="collapse navbar-collapse" id="medilifeMenu">
                                     <!-- Menu Area -->
                                     <ul class="navbar-nav ml-auto">
-                                        <li class="nav-item active">
-                                            <a class="nav-link" href="patient_dashboard.jsp">Home <span class="sr-only">(current)</span></a>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="PatientDashboardServlet">Home <span class="sr-only">(current)</span></a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="about-us.jsp">About Us</a>
@@ -94,7 +94,7 @@
                                     
                                     	 
                                     
-                                    <a href="#" class="btn medilife-appoint-btn ml-30">For <span>emergencies</span> Click here</a>
+                                    <a href="#" class="btn medilife-appoint-btn">For <span>emergencies</span> Click here</a>
                                     <ul class="navbar-nav ml-auto">
                                  	<li class="nav-item">
                                           <a class="nav-link" href="login.jsp">Logout</a>
