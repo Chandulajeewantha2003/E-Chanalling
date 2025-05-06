@@ -30,7 +30,7 @@
                                 </div>
                                 <div class="widget-post-content">
                                     <a href="#">Better Health Care</a>
-                                    <p>Dec 02, 2017</p>
+                                    <p>Dec 02, 2024</p>
                                 </div>
                             </div>
                             <div class="widget-single-blog-post d-flex">
@@ -39,7 +39,7 @@
                                 </div>
                                 <div class="widget-post-content">
                                     <a href="#">A new drug is tested</a>
-                                    <p>Dec 02, 2017</p>
+                                    <p>April 01, 2025</p>
                                 </div>
                             </div>
                             <div class="widget-single-blog-post d-flex">
@@ -98,10 +98,10 @@
                         <div class="copywrite-text">
                             <p>
                                 Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-                                All rights reserved | This template is made with <i class="fa fa-heart-o"></i> by 
-                                <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                All rights reserved | This website template is made with <i class="fa fa-heart-o"></i> by 
+                                <a href="https://github.com/Chandulajeewantha2003" target="_blank">RainBowCodex</a>
                             </p>
-                            <p>Re-distributed by <a href="https://themewagon.com/" target="_blank">Themewagon</a></p>
+                            <p>Re-distributed by <a href="" target="_blank">Chandula Jeewantha</a></p>
                         </div>
                     </div>
                 </div>
