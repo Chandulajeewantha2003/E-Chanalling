@@ -95,7 +95,12 @@
                 <%
                     }
                 %>
+               
             </tbody>
+             <div class="mt-3">
+				    <a href="PatientDashboard" class="btn btn-secondary">Back to Dashboard</a>
+				</div>
+                
         </table>
     </div>
 </body>

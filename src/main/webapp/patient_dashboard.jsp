@@ -18,7 +18,7 @@
                             <div class="hero-slides-content">
                                 <h2 data-animation="fadeInUp" data-delay="100ms">Medical Services that <br>You can Trust 100%</h2>
                                 <h6 data-animation="fadeInUp" data-delay="400ms">We provide reliable, patient-focused care with advanced medical services to ensure your health is always in safe hands.</h6>
-                                <a href="patient_messages.jsp" class="btn medilife-btn mt-50" data-animation="fadeInUp" data-delay="700ms">Discover Medifile <span>+</span></a>
+                                <a href="messages" class="btn medilife-btn mt-50" data-animation="fadeInUp" data-delay="700ms">Discover Medifile <span>+</span></a>
                             </div>
                         </div>
                     </div>
@@ -32,7 +32,7 @@
                             <div class="hero-slides-content">
                                 <h2 data-animation="fadeInUp" data-delay="100ms">Medical Services that <br>You can Trust 100%</h2>
                                 <h6 data-animation="fadeInUp" data-delay="400ms">Your health is our top priority — experience compassionate care, trusted professionals, and modern treatment you can rely on.</h6>
-                                <a href="patient_messages.jsp" class="btn medilife-btn mt-50" data-animation="fadeInUp" data-delay="700ms">Discover Medifile <span>+</span></a>
+                                <a href="messages" class="btn medilife-btn mt-50" data-animation="fadeInUp" data-delay="700ms">Discover Medifile <span>+</span></a>
                             </div>
                         </div>
                     </div>
@@ -46,7 +46,7 @@
                             <div class="hero-slides-content">
                                 <h2 data-animation="fadeInUp" data-delay="100ms">Medical Services that <br>You can Trust 100%</h2>
                                 <h6 data-animation="fadeInUp" data-delay="400ms">Book doctor appointments online anytime, anywhere. Fast, secure, and convenient healthcare at your fingertips.</h6>
-                                <a href="patient_messages.jsp" class="btn medilife-btn mt-50" data-animation="fadeInUp" data-delay="700ms">Discover Medifile <span>+</span></a>
+                                <a href="messages" class="btn medilife-btn mt-50" data-animation="fadeInUp" data-delay="700ms">Discover Medifile <span>+</span></a>
                             </div>
                         </div>
                     </div>
