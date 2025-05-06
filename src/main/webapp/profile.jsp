@@ -2,7 +2,6 @@
 <%@ page import="javax.servlet.http.HttpSession" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-
 <%
     HttpSession sessionObj = request.getSession(false);
     if (sessionObj == null || sessionObj.getAttribute("userRole") == null || !"patient".equals(sessionObj.getAttribute("userRole"))) {
@@ -29,8 +28,10 @@
     } catch (Exception e) {
         e.printStackTrace();
     }
+
+    // Determine if profile exists
+    boolean profileExists = (bloodGroup != null && !bloodGroup.isEmpty());
 %>
- <!-- ***** Header Area Start ***** -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -55,45 +56,81 @@
             <% sessionObj.removeAttribute("errorMessage"); %>
         <% } %>
 
-        <!-- Update Profile Form -->
-        <form action="UpdateProfileServlet" method="post">
-            <div class="mb-3">
-                <label class="form-label">Blood Group:</label>
-                <input type="text" name="bloodGroup" value="<%= bloodGroup %>" class="form-control" required />
-            </div>
+        <%-- Update Profile Form (Visible if profile exists) --%>
+        <% if (profileExists) { %>
+            <form action="UpdateProfileServlet" method="post">
+                <div class="mb-3">
+                    <label class="form-label">Blood Group:</label>
+                    <input type="text" name="bloodGroup" value="<%= bloodGroup %>" class="form-control" required />
+                </div>
 
-            <div class="mb-3">
-                <label class="form-label">Age:</label>
-                <input type="number" name="age" value="<%= age %>" class="form-control" required />
-            </div>
+                <div class="mb-3">
+                    <label class="form-label">Age:</label>
+                    <input type="number" name="age" value="<%= age %>" class="form-control" required />
+                </div>
 
-            <div class="mb-3">
-                <label class="form-label">Sex:</label>
-                <select name="sex" class="form-control" required>
-                    <option value="Male" <%= "Male".equals(sex) ? "selected" : "" %>>Male</option>
-                    <option value="Female" <%= "Female".equals(sex) ? "selected" : "" %>>Female</option>
-                </select>
-            </div>
+                <div class="mb-3">
+                    <label class="form-label">Sex:</label>
+                    <select name="sex" class="form-control" required>
+                        <option value="Male" <%= "Male".equals(sex) ? "selected" : "" %>>Male</option>
+                        <option value="Female" <%= "Female".equals(sex) ? "selected" : "" %>>Female</option>
+                    </select>
+                </div>
 
-            <div class="mb-3">
-                <label class="form-label">Address:</label>
-                <input type="text" name="address" value="<%= address %>" class="form-control" required />
-            </div>
+                <div class="mb-3">
+                    <label class="form-label">Address:</label>
+                    <input type="text" name="address" value="<%= address %>" class="form-control" required />
+                </div>
 
-            <div class="mb-3">
-                <label class="form-label">Telephone:</label>
-                <input type="tel" name="telephone" value="<%= telephone %>" class="form-control" required />
-            </div>
+                <div class="mb-3">
+                    <label class="form-label">Telephone:</label>
+                    <input type="tel" name="telephone" value="<%= telephone %>" class="form-control" required />
+                </div>
 
-            <button type="submit" class="btn btn-primary w-100">Update Profile</button>
-        </form>
+                <button type="submit" class="btn btn-primary w-100">Update Profile</button>
+            </form>
 
-        <!-- Delete Profile Data Form -->
-        <form action="DeleteProfileServlet" method="post" class="mt-3">
-            <button type="submit" class="btn btn-danger w-100">Delete Age, Address, and Phone</button>
-        </form>
+            <!-- Delete Profile Data Form -->
+            <form action="DeleteProfileServlet" method="post" class="mt-3">
+                <button type="submit" class="btn btn-danger w-100">Delete Age, Address, and Phone</button>
+            </form>
+        <% } else { %>
 
-        <button type="button" class="btn btn-secondary w-100 mt-3" onclick="window.location.href='PatientDashboardServlet'">Go Back</button>
+            <%-- Create Profile Form (Visible if profile does not exist) --%>
+            <form action="CreateProfileServlet" method="post" class="mt-3">
+                <div class="mb-3">
+                    <label class="form-label">Blood Group:</label>
+                    <input type="text" name="bloodGroup" class="form-control" required />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Age:</label>
+                    <input type="number" name="age" class="form-control" required />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Sex:</label>
+                    <select name="sex" class="form-control" required>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Address:</label>
+                    <input type="text" name="address" class="form-control" required />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Telephone:</label>
+                    <input type="tel" name="telephone" class="form-control" required />
+                </div>
+
+                <button type="submit" class="btn btn-success w-100">Create Profile</button>
+            </form>
+        <% } %>
+
+        <button type="button" class="btn btn-secondary w-100 mt-3" onclick="window.location.href='PatientDashboard'">Go Back</button>
     </div>
 </body>
 </html>
