@@ -70,10 +70,10 @@ public class CreateProfileServlet extends HttpServlet {
             session.setAttribute("errorMessage", "An error occurred while creating the profile.");
         }
 
-        response.sendRedirect("profile.jsp");
+        response.sendRedirect("profile");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.sendRedirect("profile.jsp");
+        response.sendRedirect("profile");
     }
 }

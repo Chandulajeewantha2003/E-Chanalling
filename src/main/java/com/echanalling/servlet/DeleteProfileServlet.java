@@ -38,6 +38,6 @@ public class DeleteProfileServlet extends HttpServlet {
             session.setAttribute("errorMessage", "Error deleting profile data.");
         }
 
-        response.sendRedirect("profile.jsp");
+        response.sendRedirect("profile");
     }
 }

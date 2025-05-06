@@ -48,6 +48,6 @@ public class UpdateProfileServlet extends HttpServlet {
             session.setAttribute("errorMessage", "Error updating profile.");
         }
 
-        response.sendRedirect("profile.jsp");
+        response.sendRedirect("profile");
     }
 }
