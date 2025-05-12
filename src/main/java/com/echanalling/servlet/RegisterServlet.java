@@ -14,17 +14,20 @@ import com.echanalling.service.UserDAO;
 public class RegisterServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private UserDAO userDAO;
-
+    
+    //Encapsulation (Private UserDAO)
     public void init() {
         userDAO = new UserDAO();
     }
-
+    
+    //Polymorphism (DOGET)
     // Handle GET requests (Redirect to registration page)
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.sendRedirect("register.jsp"); // Redirect to registration form
     }
-
+    
+    //Polymorphism (DOPOST)
     // Handle POST requests (Form submission)
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

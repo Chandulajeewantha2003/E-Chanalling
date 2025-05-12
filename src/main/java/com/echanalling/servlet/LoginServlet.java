@@ -16,7 +16,8 @@ public class LoginServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private UserDAO userDAO;
     private com.echanalling.service.DoctorDAO doctorDAO;
-
+    
+  //Encapsulation (Private UserDAO and DoctorDAO)
     public void init() {
         userDAO = new UserDAO();
         doctorDAO = new com.echanalling.service.DoctorDAO();

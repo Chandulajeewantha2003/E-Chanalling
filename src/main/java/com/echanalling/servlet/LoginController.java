@@ -8,13 +8,15 @@ import javax.servlet.http.*;
 @WebServlet("/login")  // clean URL = /login
 public class LoginController extends HttpServlet {
     private static final long serialVersionUID = 1L;
-
+    
+    //Polymorphism (DOGET)
     // Display the login page (GET request)
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         request.getRequestDispatcher("login.jsp").forward(request, response);
     }
-
+    
+    //Polymorphism (DOPOST)
     // Handle login logic (POST request)
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
