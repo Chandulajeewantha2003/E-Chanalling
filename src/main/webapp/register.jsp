@@ -6,7 +6,6 @@
     <meta charset="UTF-8">
     <title>Register Page</title>
     <!-- Bootstrap CSS -->
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- FontAwesome for Social Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -30,6 +29,27 @@
             }
         }
     </style>
+
+    <script>
+        // Function to show the success message
+        function showSuccessMessage() {
+            var successMessage = document.getElementById('successMessage');
+            successMessage.style.display = 'block';
+
+            // Hide the message after 5 seconds
+            setTimeout(function () {
+                successMessage.style.display = 'none';
+            }, 5000);
+        }
+
+        // Check if there is a success message in the URL parameters
+        window.onload = function () {
+            var urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('message') && urlParams.get('message') === 'Registration successful, please login!') {
+                showSuccessMessage();
+            }
+        };
+    </script>
 </head>
 
 <body>
@@ -38,9 +58,7 @@
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-md-9 col-lg-6 col-xl-5">
                     <!-- Updated img tag with the correct src attribute for displaying image -->
-                   
                     <img src="img/bg-img/doctor.png" class="img-fluid" alt="Doctor Image">
-                    
                 </div>
                 <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
                     <form action="${pageContext.request.contextPath}/RegisterServlet" method="post">
@@ -78,10 +96,14 @@
                             <button type="submit" class="btn btn-primary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;">Register</button>
                             <p class="small fw-bold mt-2 pt-1 mb-0">Already have an account? <a href="login.jsp" class="link-danger">Login</a></p>
                         </div>
-
                     </form>
                 </div>
             </div>
+        </div>
+
+        <!-- Success Message Popup -->
+        <div id="successMessage" class="alert alert-success text-center" style="display: none; position: fixed; top: 10%; left: 50%; transform: translateX(-50%); width: 50%; z-index: 1000;">
+            Registration successful! Please login.
         </div>
 
         <!-- Footer -->

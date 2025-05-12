@@ -14,27 +14,36 @@ import com.echanalling.service.UserDAO;
 public class RegisterServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private UserDAO userDAO;
-    
-    //Encapsulation (Private UserDAO)
+
+    // Encapsulation (Private UserDAO)
     public void init() {
         userDAO = new UserDAO();
     }
-    
-    //Polymorphism (DOGET)
-    // Handle GET requests (Redirect to registration page)
+
+    // Polymorphism (DOGET)
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.sendRedirect("register.jsp"); // Redirect to registration form
+        response.sendRedirect("register.jsp");
     }
-    
-    //Polymorphism (DOPOST)
-    // Handle POST requests (Form submission)
+
+    // Polymorphism (DOPOST)
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         String role = request.getParameter("role");
+
+        // Server-side validation
+        if (name == null || name.trim().isEmpty() ||
+            email == null || !email.contains("@") ||
+            password == null || password.trim().isEmpty() ||
+            role == null || role.trim().isEmpty()) {
+
+            response.sendRedirect("register.jsp?error=Please fill all fields correctly. Email must contain '@'");
+            return;
+        }
 
         User newUser = new User(0, name, email, password, role);
         boolean isRegistered = userDAO.registerUser(newUser);
