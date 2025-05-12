@@ -22,10 +22,27 @@ public class UpdateProfileServlet extends HttpServlet {
 
         int userId = (Integer) session.getAttribute("userId");
         String bloodGroup = request.getParameter("bloodGroup");
-        int age = Integer.parseInt(request.getParameter("age"));
+        String ageParam = request.getParameter("age");
         String sex = request.getParameter("sex");
         String address = request.getParameter("address");
         String telephone = request.getParameter("telephone");
+
+        // Telephone validation - must be exactly 10 digits
+        if (telephone == null || !telephone.matches("\\d{10}")) {
+            session.setAttribute("errorMessage", "Telephone number must be exactly 10 digits.");
+            response.sendRedirect("profile.jsp");
+            return;
+        }
+
+        // Age validation (ensure it's a number)
+        int age;
+        try {
+            age = Integer.parseInt(ageParam);
+        } catch (NumberFormatException e) {
+            session.setAttribute("errorMessage", "Age must be a valid number.");
+            response.sendRedirect("profile.jsp");
+            return;
+        }
 
         try (Connection conn = DBConnection.getConnection()) {
             String sql = "UPDATE profile SET blood_group = ?, age = ?, sex = ?, address = ?, telephone = ? WHERE user_id = ?";

@@ -26,7 +26,7 @@ public class CreateProfileServlet extends HttpServlet {
         String address = request.getParameter("address");
         String telephone = request.getParameter("telephone");
 
-        // Basic validation
+        // Basic validation - Check required fields
         if (bloodGroup == null || bloodGroup.isEmpty() ||
             ageParam == null || ageParam.isEmpty() ||
             sex == null || sex.isEmpty() ||
@@ -38,11 +38,19 @@ public class CreateProfileServlet extends HttpServlet {
             return;
         }
 
+        // Validate Age is number
         int age = 0;
         try {
             age = Integer.parseInt(ageParam);
         } catch (NumberFormatException e) {
             session.setAttribute("errorMessage", "Age must be a valid number.");
+            response.sendRedirect("profile.jsp");
+            return;
+        }
+
+        // Validate Telephone is exactly 10 digits
+        if (!telephone.matches("\\d{10}")) {
+            session.setAttribute("errorMessage", "Telephone number must be exactly 10 digits.");
             response.sendRedirect("profile.jsp");
             return;
         }
