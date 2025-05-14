@@ -18,7 +18,7 @@
                             <div class="hero-slides-content">
                                 <h2 data-animation="fadeInUp" data-delay="100ms">Medical Services that <br>You can Trust 100%</h2>
                                 <h6 data-animation="fadeInUp" data-delay="400ms">We provide reliable, patient-focused care with advanced medical services to ensure your health is always in safe hands.</h6>
-                                <a href="messages" class="btn medilife-btn mt-50" data-animation="fadeInUp" data-delay="700ms">Discover Medifile <span>+</span></a>
+                                <a href="messages" class="btn medilife-btn mt-50" data-animation="fadeInUp" data-delay="700ms">Discover Medifile Contact <span>+</span></a>
                             </div>
                         </div>
                     </div>
@@ -32,7 +32,7 @@
                             <div class="hero-slides-content">
                                 <h2 data-animation="fadeInUp" data-delay="100ms">Medical Services that <br>You can Trust 100%</h2>
                                 <h6 data-animation="fadeInUp" data-delay="400ms">Your health is our top priority — experience compassionate care, trusted professionals, and modern treatment you can rely on.</h6>
-                                <a href="messages" class="btn medilife-btn mt-50" data-animation="fadeInUp" data-delay="700ms">Discover Medifile <span>+</span></a>
+                                <a href="messages" class="btn medilife-btn mt-50" data-animation="fadeInUp" data-delay="700ms">Discover Medifile Contact<span>+</span></a>
                             </div>
                         </div>
                     </div>
@@ -46,7 +46,7 @@
                             <div class="hero-slides-content">
                                 <h2 data-animation="fadeInUp" data-delay="100ms">Medical Services that <br>You can Trust 100%</h2>
                                 <h6 data-animation="fadeInUp" data-delay="400ms">Book doctor appointments online anytime, anywhere. Fast, secure, and convenient healthcare at your fingertips.</h6>
-                                <a href="messages" class="btn medilife-btn mt-50" data-animation="fadeInUp" data-delay="700ms">Discover Medifile <span>+</span></a>
+                                <a href="messages" class="btn medilife-btn mt-50" data-animation="fadeInUp" data-delay="700ms">Discover Medifile Contact<span>+</span></a>
                             </div>
                         </div>
                     </div>
@@ -210,7 +210,7 @@
                     <div class="features-content">
                         <h2>A new way to treat pacients in a revolutionary facility</h2>
                         <p>Experience modern healthcare like never before. Our state-of-the-art facility combines advanced technology, expert medical teams, and patient-centered design to deliver faster, more accurate, and more comfortable treatments. We're redefining what it means to receive care — with innovation, compassion, and trust at the heart of everything we do.</p>
-                        <a href="#" class="btn medilife-btn mt-50">View the services <span>+</span></a>
+                        <a href="about-us.jsp" class="btn medilife-btn mt-50">View the services <span>+</span></a>
                     </div>
                 </div>
                 <div class="col-12 col-lg-6">
@@ -235,7 +235,7 @@
                             <img src="img/blog-img/1.jpg" alt="">
                             <!-- Post Date -->
                             <div class="post-date">
-                                <a href="#">Jan 23, 2018</a>
+                                <a href="#">Jan 23, 2025</a>
                             </div>
                         </div>
                         <!-- Post Content -->
@@ -243,7 +243,7 @@
                             <div class="post-author">
                                 <a href="#"><img src="img/blog-img/p1.jpg" alt=""></a>
                             </div>
-                            <a href="#" class="headline">New drog release soon</a>
+                            <a href="#" class="headline">New drug release soon</a>
                             <p>A breakthrough in treatment is on the way. Stay tuned for the launch of our latest medication, designed to deliver better outcomes with fewer side effects.</p>
                             <a href="#" class="comments">3 Comments</a>
                         </div>
@@ -257,7 +257,7 @@
                             <img src="img/blog-img/2.jpg" alt="">
                             <!-- Post Date -->
                             <div class="post-date">
-                                <a href="#">Jan 23, 2018</a>
+                                <a href="#">Jan 23, 2025</a>
                             </div>
                         </div>
                         <!-- Post Content -->
@@ -279,7 +279,7 @@
                             <img src="img/blog-img/3.jpg" alt="">
                             <!-- Post Date -->
                             <div class="post-date">
-                                <a href="#">Jan 23, 2018</a>
+                                <a href="#">Jan 23, 2025</a>
                             </div>
                         </div>
                         <!-- Post Content -->
@@ -308,7 +308,7 @@
                     <div class="emergency-content">
                         <i class="icon-smartphone"></i>
                         <h2>For Emergency calls</h2>
-                        <h3>+12-823-611-8721</h3>
+                        <h3>+94-011-456-9876</h3>
                     </div>
                 </div>
                 <div class="col-12 col-lg-6">
@@ -316,29 +316,29 @@
                         <!-- Single Emergency Helpline -->
                         <div class="col-12 col-sm-6">
                             <div class="single-emergency-helpline mb-50">
-                                <h5>London</h5>
-                                <p>0080 673 729 766 <br> contact@business.com <br> Lamas Str, no 14-18 <br> 41770 Miami</p>
+                                <h5>Malabe</h5>
+                                <p>000 0000 000 <br> contact@business.com </p>
                             </div>
                         </div>
                         <!-- Single Emergency Helpline -->
                         <div class="col-12 col-sm-6">
                             <div class="single-emergency-helpline mb-50">
-                                <h5>New Castle</h5>
-                                <p>0080 673 729 766 <br> contact@business.com <br> Lamas Str, no 14-18 <br> 41770 Miami</p>
+                                <h5>Rathnapura</h5>
+                                <p>111 1111 111 <br> contact@business.com </p>
                             </div>
                         </div>
                         <!-- Single Emergency Helpline -->
                         <div class="col-12 col-sm-6">
                             <div class="single-emergency-helpline mb-50">
-                                <h5>Manchester</h5>
-                                <p>0080 673 729 766 <br> contact@business.com <br> Lamas Str, no 14-18 <br> 41770 Miami</p>
+                                <h5>Colombo</h5>
+                                <p>222 2222 222 <br> contact@business.com </p>
                             </div>
                         </div>
                         <!-- Single Emergency Helpline -->
                         <div class="col-12 col-sm-6">
                             <div class="single-emergency-helpline mb-50">
-                                <h5>Bristol</h5>
-                                <p>0080 673 729 766 <br> contact@business.com <br> Lamas Str, no 14-18 <br> 41770 Miami</p>
+                                <h5>Anuradhapura</h5>
+                                <p>333 3333 333 <br> contact@business.com </p>
                             </div>
                         </div>
                     </div>

@@ -48,7 +48,7 @@
                     <div class="col-12 h-100">
                         <div class="h-100 d-md-flex justify-content-between align-items-center">
                             <p>Welcome to <span> <%= sessionObj.getAttribute("userName") %></span></p>
-                            <p>Opening Hours : Monday to Saturday - 8am to 10pm Contact : <span>+12-823-611-8721</span></p>
+                            <p>Opening Hours : Monday to Saturday - 8am to 10pm Contact : <span>+94-011-456-9876</span></p>
                         </div>
                     </div>
                 </div>
@@ -81,9 +81,6 @@
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="bookAppointment.jsp">Appointment</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="contact.jsp">Contact</a>
                                         </li>
                                          <li class="nav-item">
                                             <a class="nav-link" href="profile">Profile</a>

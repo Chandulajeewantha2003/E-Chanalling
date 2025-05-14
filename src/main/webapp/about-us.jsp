@@ -12,7 +12,7 @@
                 <div class="col-12">
                     <div class="breadcumb-content">
                         <h3 class="breadcumb-title">About us</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetuer</p>
+                        
                     </div>
                 </div>
             </div>
@@ -27,7 +27,7 @@
                 <div class="col-12 col-lg-6">
                     <div class="features-content">
                         <h2>We always put our pacients first</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli.Lorem ipsum dolor sit amet, consec tetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer.</p>
+                        <p>At the heart of our service is a deep commitment to the well-being and comfort of every individual who walks through our doors. We believe that quality healthcare is not just about treatment—it's about compassion, respect, and building trust. Our team of dedicated professionals works tirelessly to ensure that each patient receives personalized attention, timely care, and support throughout their journey. Whether it’s through advanced medical expertise or a reassuring smile, we strive to make every experience as comfortable and human-centered as possible.</p>
                         <a href="#" class="btn medilife-btn mt-50">View the services <span>+</span></a>
                     </div>
                 </div>
@@ -49,15 +49,14 @@
                     <div class="video-box bg-overlay-black">
                         <img src="img/bg-img/video2.jpg" alt="">
                         <div class="play-btn">
-                            <a class="popup-video" href="http://www.youtube.com/watch?v=0O2aH4XLbto"><img src="img/core-img/play.png" alt=""></a>
-                            <h6>A day at Medilife-Video</h6>
+                            <h6>Our Payments Methods are coming soon..</h6>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-lg-4">
                     <div class="video-content">
-                        <h2>A day at Medilife -Video</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                        <h2>A day at Medilife Online Payments</h2>
+                        <p>We're working hard to bring you secure and convenient payment options. Stay tuned for updates as we enhance your experience with flexible ways to pay online.</p>
                     </div>
                 </div>
             </div>
@@ -65,56 +64,6 @@
     </section>
     <!-- ***** Video Area End ***** -->
 
-    <!-- ***** Skilss Area Start ***** -->
-    <section class="our-skills-area text-center section-padding-100-0">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-sm-6 col-md-3 col-lg-2">
-                    <div class="single-pie-bar" data-percent="90">
-                        <canvas class="bar-circle" width="100" height="100"></canvas>
-                        <h5>Donations</h5>
-                        <p>Dolor sit amet</p>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-3 col-lg-2">
-                    <div class="single-pie-bar" data-percent="65">
-                        <canvas class="bar-circle" width="100" height="100"></canvas>
-                        <h5>Ambition</h5>
-                        <p>Dolor sit amet</p>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-3 col-lg-2">
-                    <div class="single-pie-bar" data-percent="25">
-                        <canvas class="bar-circle" width="100" height="100"></canvas>
-                        <h5>Good Luck</h5>
-                        <p>Dolor sit amet</p>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-3 col-lg-2">
-                    <div class="single-pie-bar" data-percent="69">
-                        <canvas class="bar-circle" width="100" height="100"></canvas>
-                        <h5>High Tech</h5>
-                        <p>Dolor sit amet</p>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-3 col-lg-2">
-                    <div class="single-pie-bar" data-percent="83">
-                        <canvas class="bar-circle" width="100" height="100"></canvas>
-                        <h5>Science</h5>
-                        <p>Dolor sit amet</p>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-3 col-lg-2">
-                    <div class="single-pie-bar" data-percent="38">
-                        <canvas class="bar-circle" width="100" height="100"></canvas>
-                        <h5>Creativity</h5>
-                        <p>Dolor sit amet</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ***** Skills Area End ***** -->
 
     <!-- ***** Tabs Area Start ***** -->
     <section class="medilife-tabs-area section-padding-100">
@@ -124,22 +73,22 @@
                     <div class="medilife-tabs-content">
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link" id="institution-tab" data-toggle="tab" href="#institution" role="tab" aria-controls="institution" aria-selected="false">Institution</a>
+                                <a class="nav-link" id="institution-tab" data-toggle="tab" href="#institution" role="tab" aria-controls="institution" aria-selected="false">Doctor1</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="faq-tab" data-toggle="tab" href="#faq" role="tab" aria-controls="faq" aria-selected="false">FAQ</a>
+                                <a class="nav-link" id="faq-tab" data-toggle="tab" href="#faq" role="tab" aria-controls="faq" aria-selected="false">Doctor2</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" id="specialities-tab" data-toggle="tab" href="#specialities" role="tab" aria-controls="specialities" aria-selected="true">Specialities</a>
+                                <a class="nav-link active" id="specialities-tab" data-toggle="tab" href="#specialities" role="tab" aria-controls="specialities" aria-selected="true">Doctor3</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="laboratory-tab" data-toggle="tab" href="#laboratory" role="tab" aria-controls="laboratory" aria-selected="false">Laboratory</a>
+                                <a class="nav-link" id="laboratory-tab" data-toggle="tab" href="#laboratory" role="tab" aria-controls="laboratory" aria-selected="false">Doctor4</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="emergencies-tab" data-toggle="tab" href="#emergencies" role="tab" aria-controls="emergencies" aria-selected="false">Emergencies</a>
+                                <a class="nav-link" id="emergencies-tab" data-toggle="tab" href="#emergencies" role="tab" aria-controls="emergencies" aria-selected="false">Doctor5</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="scolarship-tab" data-toggle="tab" href="#scolarship" role="tab" aria-controls="scolarship" aria-selected="false">Scolarship Programs</a>
+                                <a class="nav-link" id="scolarship-tab" data-toggle="tab" href="#scolarship" role="tab" aria-controls="scolarship" aria-selected="false">Doctor6</a>
                             </li>
                         </ul>
 
@@ -149,7 +98,7 @@
                                     <!-- Medilife Tab Text  -->
                                     <div class="medilife-tab-text">
                                         <h2>Take a look at this</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli.</p>
+                                        <p>Coming Soon Doctors Details........</p>
                                     </div>
                                     <!-- Medilife Tab Img  -->
                                     <div class="medilife-tab-img">
@@ -162,7 +111,7 @@
                                     <!-- Medilife Tab Text  -->
                                     <div class="medilife-tab-text">
                                         <h2>Take a look at this</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli.</p>
+                                        <p>Coming Soon Doctors Details........</p>
                                     </div>
                                     <!-- Medilife Tab Img  -->
                                     <div class="medilife-tab-img">
@@ -175,7 +124,7 @@
                                     <!-- Medilife Tab Text  -->
                                     <div class="medilife-tab-text">
                                         <h2>Take a look at this</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli.</p>
+                                        <p>Coming Soon Doctors Details........</p>
                                     </div>
                                     <!-- Medilife Tab Img  -->
                                     <div class="medilife-tab-img">
@@ -188,7 +137,7 @@
                                     <!-- Medilife Tab Text  -->
                                     <div class="medilife-tab-text">
                                         <h2>Take a look at this</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli.</p>
+                                        <p>Coming Soon Doctors Details........</p>
                                     </div>
                                     <!-- Medilife Tab Img  -->
                                     <div class="medilife-tab-img">
@@ -201,7 +150,7 @@
                                     <!-- Medilife Tab Text  -->
                                     <div class="medilife-tab-text">
                                         <h2>Take a look at this</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli.</p>
+                                        <p>Coming Soon Doctors Details........</p>
                                     </div>
                                     <!-- Medilife Tab Img  -->
                                     <div class="medilife-tab-img">
@@ -214,7 +163,7 @@
                                     <!-- Medilife Tab Text  -->
                                     <div class="medilife-tab-text">
                                         <h2>Take a look at this</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli.</p>
+                                        <p>Coming Soon Doctors Details........</p>
                                     </div>
                                     <!-- Medilife Tab Img  -->
                                     <div class="medilife-tab-img">

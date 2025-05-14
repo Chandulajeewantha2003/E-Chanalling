@@ -8,7 +8,6 @@
                         <div class="footer-logo">
                             <img src="img/core-img/logo.png" alt="">
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit...</p>
                         <div class="footer-social-info">
                             <a href="#"><i class="fa fa-google-plus"></i></a>
                             <a href="#"><i class="fa fa-pinterest"></i></a>
@@ -81,7 +80,7 @@
                                 <input type="email" class="form-control border-0 mb-0" name="newsletterEmail" placeholder="Your Email Here">
                                 <button type="submit">Subscribe</button>
                             </form>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit...</p>
+                          
                         </div>
                     </div>
                 </div>
